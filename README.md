@@ -15,7 +15,7 @@ Client Usage
 Use your favorite utility/language to establish a data stream to the destination port 25000 and send the text, that's it!
 
 	echo "mesg" | netcat -w 1 x.y.z.w 25000
-or
+	
 	echo "mesg" | socat -4 - tcp:x.y.z.w:25000
 
 TODO
