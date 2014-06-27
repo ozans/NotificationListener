@@ -47,7 +47,7 @@ public class ListenerService extends Service {
 	
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		Log.i("MyService", "Received start id " + startId + ": " + intent);
+		Log.i("NotificationListenerService", "Received start id " + startId + ": " + intent);
 		
 		Toast.makeText(getBaseContext(), "Notification ListenerService is started",
 	              Toast.LENGTH_LONG).show();
@@ -99,7 +99,7 @@ public class ListenerService extends Service {
 			notificationStr=str;
 		}
 		public void run () {
-			Log.d("MyService", "ShowNotificationThread ran with text: " + notificationStr);
+			Log.d("NotificationListenerService", "ShowNotificationThread ran with text: " + notificationStr);
 			putNotification(addr,notificationStr);
 		}
 	}
